@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Wenjie (Jeff) Li — robotics researcher working on tactile sensing, dexterous manipulation, and physical intelligence." />
+  <meta name="theme-color" content="#10283d" />
+  <title>Wenjie (Jeff) Li — Research</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" aria-label="Primary navigation">
+    <a class="wordmark" href="#intro" aria-label="Back to introduction">WJL</a>
+    <nav>
+      <a href="#intro">About</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="intro" aria-labelledby="intro-title">
+      <div class="hero-image" aria-hidden="true"></div>
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="hero-content shell">
+        <div class="identity-block">
+          <img class="portrait" src="assets/images/profile.jpg" alt="Portrait of Wenjie (Jeff) Li" width="601" height="601" />
+          <div class="identity-copy">
+            <p class="eyebrow">Robotics · Physical Intelligence</p>
+            <h1 id="intro-title"><span>Wenjie</span><span class="nickname">(Jeff)</span><span>Li</span></h1>
+            <div class="social-links" aria-label="Profile links">
+              <a href="https://scholar.google.com/citations?hl=en&user=a4M5kT8AAAAJ" target="_blank" rel="noreferrer" aria-label="Google Scholar">Scholar</a>
+              <a href="https://www.linkedin.com/in/wenjie-jeff-li-791812266/" target="_blank" rel="noreferrer" aria-label="LinkedIn profile">LinkedIn</a>
+              <a href="mailto:jeffwli@berkeley.edu">Email</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="intro-copy">
+          <p>I am a Ph.D. student in the <a href="https://msc.berkeley.edu/" target="_blank" rel="noreferrer">Mechanical Systems Control Lab</a> at UC Berkeley and a member of <a href="https://bair.berkeley.edu/" target="_blank" rel="noreferrer">Berkeley AI Research (BAIR)</a>, advised by <a href="https://me.berkeley.edu/people/masayoshi-tomizuka/" target="_blank" rel="noreferrer">Prof. Masayoshi Tomizuka</a>. My current research focuses on tactile sensing–empowered dexterous manipulation.</p>
+          <p>Previously, I was a visiting undergraduate researcher at <a href="https://www.stanford.edu/" target="_blank" rel="noreferrer">Stanford University</a> through the UGVR program and at <a href="https://www.harvard.edu/" target="_blank" rel="noreferrer">Harvard University</a> through the VURI program. I received my bachelor’s degrees from <a href="https://www.tsinghua.edu.cn/en/" target="_blank" rel="noreferrer">Tsinghua University</a>. During my undergraduate studies, I was fortunate to work with <a href="https://cheme.stanford.edu/people/zhenan-bao" target="_blank" rel="noreferrer">Prof. Zhenan Bao</a>, <a href="https://seas.harvard.edu/person/katia-bertoldi" target="_blank" rel="noreferrer">Prof. Katia Bertoldi</a>, and <a href="https://www.thusoftrobot.com/" target="_blank" rel="noreferrer">Prof. Huichan Zhao</a>.</p>
+        </div>
+      </div>
+      <a class="scroll-cue" href="#research" aria-label="Scroll to research">Scroll ↓</a>
+    </section>
+
+    <section class="research-section shell" id="research" aria-labelledby="research-title">
+      <div class="section-heading">
+        <p class="section-index">01</p>
+        <h2 id="research-title">Research</h2>
+      </div>
+      <div class="research-intro">
+        <p class="research-lead">I study how robots can acquire, interpret, and act on physical information through interaction.</p>
+        <p>My research broadly explores <strong>physical intelligence</strong> for dexterous and efficient robot–world interaction. I investigate the mechanics of contact, tactile sensing as an active channel for acquiring interaction information, and learning strategies that incorporate touch into manipulation policies. My current work centers on tactile-enabled dexterous manipulation.</p>
+      </div>
+    </section>
+
+    <section class="publications-section shell" id="publications" aria-labelledby="publications-title">
+      <div class="section-heading publication-heading">
+        <p class="section-index">02</p>
+        <div>
+          <h2 id="publications-title">Publications</h2>
+          <p class="section-note"><span class="highlight-mark" aria-hidden="true"></span> Selected works are highlighted.</p>
+        </div>
+      </div>
+
+      <div id="publication-list" class="publication-list" aria-live="polite"></div>
+      <noscript><p>Please enable JavaScript to view the publication list.</p></noscript>
+    </section>
+  </main>
+
+  <dialog class="bibtex-dialog" id="bibtex-dialog" aria-labelledby="bibtex-dialog-title">
+    <div class="bibtex-dialog-header">
+      <div>
+        <p class="dialog-eyebrow">Citation</p>
+        <h2 id="bibtex-dialog-title">BibTeX</h2>
+      </div>
+      <button class="dialog-close" type="button" aria-label="Close BibTeX dialog">×</button>
+    </div>
+    <pre><code id="bibtex-code"></code></pre>
+    <button class="copy-bibtex" type="button">Copy BibTeX</button>
+  </dialog>
+
+  <footer class="site-footer shell">
+    <p>© <span id="year"></span> Wenjie (Jeff) Li</p>
+    <p>Built for clarity, maintained as research evolves.</p>
+  </footer>
+</body>
+</html>
