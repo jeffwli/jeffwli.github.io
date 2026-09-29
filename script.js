@@ -25,8 +25,9 @@ function escapeHtml(value = '') {
 function renderMedia(media, title) {
   const fit = media?.fit === 'contain' ? 'media-contain' : 'media-cover';
   const background = media?.background === 'dark' ? 'media-dark' : 'media-light';
+  const ratio = media?.ratio === '16/9' ? 'media-native' : '';
   const position = escapeHtml(media?.position || 'center');
-  const classes = `publication-media ${fit} ${background}`;
+  const classes = `publication-media ${fit} ${background} ${ratio}`.trim();
 
   if (!media || media.type === 'placeholder' || !media.src) {
     return `<div class="${classes} placeholder" aria-label="Media placeholder for ${escapeHtml(title)}"></div>`;
