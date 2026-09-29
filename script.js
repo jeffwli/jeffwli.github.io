@@ -35,7 +35,9 @@ function renderMedia(media, title) {
   if (media.type === 'video') {
     const poster = escapeHtml(media.poster || '');
     const webm = media.webm ? `<source src="${escapeHtml(media.webm)}" type="video/webm">` : '';
-    return `<div class="${classes}"><video muted loop playsinline preload="metadata" poster="${poster}" aria-label="${escapeHtml(media.alt || title)}" style="object-position:${position}">${webm}<source src="${escapeHtml(media.src)}" type="video/mp4"></video>${renderOverlay(media.overlay)}</div>`;
+    const video = `<video muted loop playsinline preload="metadata" poster="${poster}" aria-label="${escapeHtml(media.alt || title)}" style="object-position:${position}">${webm}<source src="${escapeHtml(media.src)}" type="video/mp4"></video>`;
+    const framed = ratio ? `<div class="media-frame">${video}${renderOverlay(media.overlay)}</div>` : `${video}${renderOverlay(media.overlay)}`;
+    return `<div class="${classes}">${framed}</div>`;
   }
   return `<div class="${classes}"><img src="${escapeHtml(media.src)}" alt="${escapeHtml(media.alt || title)}" loading="lazy" style="object-position:${position}"></div>`;
 }
