@@ -1,6 +1,41 @@
 window.PUBLICATIONS = [
   {
     highlighted: true,
+    year: "2026",
+    venue: "arXiv",
+    title: "TacGooseBumps (TacGB): Retrofitting Normal-Only Tactile Sensors with Shear Encoding for Learning Contact-Rich Manipulation",
+    authors: ["Wenjie Li", "Binyu Yang", "Yuxin Chen", "Ambrose Wang", "Masayoshi Tomizuka"],
+    self: "Wenjie Li",
+    summary: "A passive domed film encodes tangential contact as changes in an existing sensor's pressure map, giving imitation-learning policies a repeatable shear cue without new electronics or force calibration.",
+    media: {
+      type: "video",
+      src: "assets/media/tacgb-2026-web.mp4",
+      webm: "assets/media/tacgb-2026-web.webm",
+      poster: "assets/media/tacgb-2026-poster.jpg",
+      alt: "TacGooseBumps film encoding shear as a change in a tactile pressure map",
+      fit: "cover",
+      position: "68% center",
+      background: "dark",
+      overlay: "tacgb"
+    },
+    badges: [],
+    links: [
+      { label: "Project", url: "https://jeffwli.github.io/tacgb/" },
+      { label: "arXiv", url: "https://arxiv.org/abs/2609.34006" },
+      { label: "PDF", url: "https://arxiv.org/pdf/2609.34006" }
+    ],
+    bibtex: `@misc{li2026tacgoosebumpstacgbretrofittingnormalonly,
+  title={TacGooseBumps (TacGB): Retrofitting Normal-Only Tactile Sensors with Shear Encoding for Learning Contact-Rich Manipulation},
+  author={Wenjie Li and Binyu Yang and Yuxin Chen and Ambrose Wang and Masayoshi Tomizuka},
+  year={2026},
+  eprint={2609.34006},
+  archivePrefix={arXiv},
+  primaryClass={cs.RO},
+  url={https://arxiv.org/abs/2609.34006}
+}`
+  },
+  {
+    highlighted: true,
     year: "2025",
     venue: "The International Journal of Robotics Research",
     title: "A center-less quadrotor design with a soft enveloping grasper for aerial grasping and delivery tasks",
@@ -84,9 +119,9 @@ window.PUBLICATIONS = [
     },
     badges: [
       {
-        label: "Cover Article · Forthcoming",
-        url: "",
-        title: "Cover publication forthcoming"
+        label: "Cover Article",
+        url: "https://advanced.onlinelibrary.wiley.com/doi/abs/10.1002/advs.76986",
+        title: "View the journal cover"
       }
     ],
     links: [

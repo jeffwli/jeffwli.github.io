@@ -33,9 +33,15 @@ function renderMedia(media, title) {
   }
   if (media.type === 'video') {
     const poster = escapeHtml(media.poster || '');
-    return `<div class="${classes}"><video muted loop playsinline preload="metadata" poster="${poster}" aria-label="${escapeHtml(media.alt || title)}" style="object-position:${position}"><source src="${escapeHtml(media.src)}" type="video/mp4"></video></div>`;
+    const webm = media.webm ? `<source src="${escapeHtml(media.webm)}" type="video/webm">` : '';
+    return `<div class="${classes}"><video muted loop playsinline preload="metadata" poster="${poster}" aria-label="${escapeHtml(media.alt || title)}" style="object-position:${position}">${webm}<source src="${escapeHtml(media.src)}" type="video/mp4"></video>${renderOverlay(media.overlay)}</div>`;
   }
   return `<div class="${classes}"><img src="${escapeHtml(media.src)}" alt="${escapeHtml(media.alt || title)}" loading="lazy" style="object-position:${position}"></div>`;
+}
+
+function renderOverlay(overlay) {
+  if (overlay !== 'tacgb') return '';
+  return `<div class="media-overlay" aria-hidden="true"><p class="overlay-title"><span class="overlay-brand"><span class="tac">Tac</span><span class="g">G</span>oose<span class="b">B</span>umps:</span><span class="overlay-rest">Hacking Tactile Sensors to Feel Friction</span></p><p class="overlay-subtitle">For Learning Contact-Rich Manipulation</p></div>`;
 }
 
 function renderAuthors(authors, self) {
