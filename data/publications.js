@@ -4,7 +4,7 @@ window.PUBLICATIONS = [
     year: "2026",
     venue: "arXiv",
     title: "TacGooseBumps (TacGB): Hacking Tactile Sensors to Feel Friction",
-    authors: ["Wenjie Li", "Binyu Yang", "Ambrose Wang", "Masayoshi Tomizuka"],
+    authors: ["Wenjie Li", "Binyu Yang", "Yuxin Chen", "Ambrose Wang", "Masayoshi Tomizuka"],
     self: "Wenjie Li",
     summary: "A passive domed film encodes tangential contact as changes in an existing sensor's pressure map, giving imitation-learning policies a repeatable shear cue without new electronics or force calibration.",
     media: {
@@ -27,7 +27,7 @@ window.PUBLICATIONS = [
     ],
     bibtex: `@misc{li2026tacgoosebumpstacgbretrofittingnormalonly,
   title={TacGooseBumps (TacGB): Retrofitting Normal-Only Tactile Sensors with Shear Encoding for Learning Contact-Rich Manipulation},
-  author={Wenjie Li and Binyu Yang and Ambrose Wang and Masayoshi Tomizuka},
+  author={Wenjie Li and Binyu Yang and Yuxin Chen and Ambrose Wang and Masayoshi Tomizuka},
   year={2026},
   eprint={2609.34006},
   archivePrefix={arXiv},
