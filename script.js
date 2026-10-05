@@ -47,10 +47,16 @@ function renderOverlay(overlay) {
   return `<div class="media-overlay" aria-hidden="true"><p class="overlay-title"><span class="overlay-brand"><span class="tac">Tac</span><span class="g">G</span>oose<span class="b">B</span>umps:</span><span class="overlay-rest">Hacking Tactile Sensors to Feel Friction</span></p><p class="overlay-subtitle">For Learning Contact-Rich Manipulation</p></div>`;
 }
 
-function renderAuthors(authors, self) {
-  return authors.map(name => name === self
-    ? `<span class="self">${escapeHtml(name)}</span>`
-    : escapeHtml(name)).join(', ');
+function renderAuthors(authors, self, links = {}) {
+  return authors.map(name => {
+    const label = name === self
+      ? `<span class="self">${escapeHtml(name)}</span>`
+      : escapeHtml(name);
+    const url = links[name];
+    return url
+      ? `<a href="${escapeHtml(url)}" target="_blank" rel="noreferrer">${label}</a>`
+      : label;
+  }).join(', ');
 }
 
 function renderBadges(badges = []) {
@@ -71,7 +77,7 @@ function renderPublications() {
       <div class="publication-body">
         <div class="publication-meta"><span>${escapeHtml(pub.year)}</span><span>—</span><span>${escapeHtml(pub.venue)}</span></div>
         <h3 class="publication-title">${escapeHtml(pub.title)}</h3>
-        <p class="publication-authors">${renderAuthors(pub.authors, pub.self)}</p>
+        <p class="publication-authors">${renderAuthors(pub.authors, pub.self, pub.authorLinks)}</p>
         ${renderBadges(pub.badges)}
         <p class="publication-summary">${escapeHtml(pub.summary)}</p>
         <div class="publication-links">
