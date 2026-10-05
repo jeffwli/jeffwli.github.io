@@ -5,9 +5,6 @@ window.PUBLICATIONS = [
     venue: "arXiv",
     title: "TacGooseBumps (TacGB): Hacking Tactile Sensors to Feel Friction",
     authors: ["Wenjie Li", "Binyu Yang", "Yuxin Chen", "Ambrose Wang", "Masayoshi Tomizuka"],
-    authorLinks: {
-      "Ambrose Wang": "https://sites.google.com/view/my-stem-journey/home?pli=1&authuser=0"
-    },
     self: "Wenjie Li",
     summary: "A passive domed film encodes tangential contact as changes in an existing sensor's pressure map, giving imitation-learning policies a repeatable shear cue without new electronics or force calibration.",
     media: {
